@@ -1,0 +1,10 @@
+POST /exchange HTTP/1.1
+Host: localhost:9999
+Accept: application/json
+Content-Type: application/json
+Content-Length: 73
+
+{
+    "key": "6d1d6ecd-7b67-45b2-b725-cea7753c3deb",
+    "answer": 6
+}

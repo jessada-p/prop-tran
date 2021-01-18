@@ -55,9 +55,6 @@ func Question() (string, string) {
 	key := uuid.New().String()
 	stores[key] = ans
 
-	log.Printf("new key %v", key)
-	log.Printf("set val %v", ans)
-
 	return key, cc.String()
 }
 
