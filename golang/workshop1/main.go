@@ -38,8 +38,7 @@ func main() {
 	l, _ := zap.NewProduction()
 	defer l.Sync()
 
-	dsn := "sqlserver://gormuser:test@DESKTOP-G8KSHQE/SQLEXPRESS?database=gorm"
-	db, err := gorm.Open(sqlserver.Open(dsn), &gorm.Config{})
+	db, err := gorm.Open(sqlserver.Open(viper.GetString("SQL_SERVER_CON")), &gorm.Config{})
 	if err != nil {
 		log.Fatal(err)
 	}
